@@ -40,6 +40,7 @@ def main():
     #prints matrixA
     for num in matrixA:
             print(num)
+    print("")
     #prints matrixB
     for num in matrixB:
             print(num)
@@ -85,11 +86,13 @@ def Core(splicedMatrix, matrixB, firstRow, lastRow):
             #print(splicedMatrix[rows][cols])
             product = 0
             addedProduct = 0
+            print(f"Coordinate: ({rows}, {cols})")
             for idx in range(matrixLength):
                 product = (splicedMatrix[rows][idx] * matrixB[idx][cols])
                 addedProduct += product
                 print(f"{splicedMatrix[rows][idx]} * {matrixB[idx][cols]} = {product}")
 
+            print(f"addedProduct: {addedProduct} -> matrixC({rows + firstRow}, {cols})")
             matrixC[rows + firstRow][cols] = addedProduct
 
 
